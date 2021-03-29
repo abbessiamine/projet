@@ -7,9 +7,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.controlsfx.control.Notifications;
 import sample.MyConnection;
 import sample.entities.client;
 import sample.entities.reservation;
@@ -181,9 +183,16 @@ public class ReserverController implements Initializable {
 
                     // email
 
-                    sendEmail(mail, date);
+                    sendEmail(mail, date,heure);
 
+                    Notifications notifications = Notifications.create();
+                    notifications.title("Reservation avec succès").position(Pos.CENTER);
+                    notifications.text("email de validation été envoyé avec succès a l'adresse "+mail).darkStyle();
+                    notifications.graphic(null);
+                    notifications.position(Pos.BOTTOM_RIGHT);
+                    notifications.showInformation();
 
+                    ((Node) event.getSource()).getScene().getWindow().hide();
                 }
                 else {
                     Alert alert5 = new Alert(Alert.AlertType.CONFIRMATION);
@@ -223,7 +232,7 @@ public class ReserverController implements Initializable {
     }
 
 
-    public void sendEmail(String mail,String date){
+    public void sendEmail(String mail,String date,String heure){
         String to = mail;
         String from = "abbessi1amine@gmail.com";
         String host = "smtp.gmail.com";
@@ -252,7 +261,7 @@ public class ReserverController implements Initializable {
             m.setFrom(new InternetAddress(from));
             m.addRecipient(MimeMessage.RecipientType.TO, new InternetAddress(to));
             m.setSubject("reservation terrain");
-            m.setText("reservation confirmer\n le"+date);
+            m.setText("reservation confirmer\n le "+date+"  a "+heure+":00 H");
 
             //send mail
 

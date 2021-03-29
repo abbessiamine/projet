@@ -7,11 +7,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import org.controlsfx.control.Notifications;
 import sample.MyConnection;
 import sample.entities.client;
 import sample.entities.reservation;
@@ -249,7 +251,7 @@ public class ListReservationController implements Initializable {
                     Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
                     alert2.setTitle("Confimation Dialog");
                     alert2.setHeaderText(null);
-                    alert2.setContentText("number of ticket=" + ticket);
+                    alert2.setContentText("number of ticket=" + ticket+"\n activer le promo 50% avec 5 ticket");
                     Optional<ButtonType> action2 = alert2.showAndWait();
                     if (action2.get() == ButtonType.OK) {
                         prix = prix / 2;
@@ -272,7 +274,16 @@ public class ListReservationController implements Initializable {
                         pst2.setInt(2, idc);
 
                         pst2.executeUpdate();
+
+                    //// notification
+                        Notifications notifications = Notifications.create();
+                        notifications.title("Promo").position(Pos.CENTER);
+                        notifications.text("Promo ticket activer ").darkStyle();
+                        notifications.graphic(null);
+                        notifications.position(Pos.BOTTOM_RIGHT);
+                        notifications.showInformation();
                     }
+                    refreshTable();
                 }
                     else {Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                         alert.setTitle("Confimation Dialog");

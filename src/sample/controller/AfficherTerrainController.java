@@ -3,8 +3,12 @@ package sample.controller;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import sample.entities.terrain;
 import sample.service.terraincrud;
 
@@ -49,6 +53,13 @@ public class AfficherTerrainController implements Initializable {
 
     void back(ActionEvent event) throws IOException {
         ((Node)event.getSource()).getScene().getWindow().hide();
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("../view/home.fxml"));
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
 
     }
 }
