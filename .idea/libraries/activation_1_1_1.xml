@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="activation-1.1.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Pictures/activation-1.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/Pictures/javax.mail.jar!/" />
+      <root url="file://$PROJECT_DIR$/.." />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+      <root url="file://$PROJECT_DIR$/../pidev/src" />
+      <root url="file://$PROJECT_DIR$/../untitled1/src" />
+      <root url="file://$PROJECT_DIR$/../untitled/src" />
+    </SOURCES>
+  </library>
+</component>

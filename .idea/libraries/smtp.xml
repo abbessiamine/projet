@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="smtp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/javamail-1.4.7/lib/smtp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/javamail-1.4.7/lib/pop3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/javamail-1.4.7/lib/mailapi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/javamail-1.4.7/lib/imap.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/javamail-1.4.7/lib/gimap.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/javamail-1.4.7/lib/dsn.jar!/" />
+      <root url="file://$PROJECT_DIR$/.." />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+      <root url="file://$PROJECT_DIR$/../pidev/src" />
+      <root url="file://$PROJECT_DIR$/../untitled1/src" />
+      <root url="file://$PROJECT_DIR$/../untitled/src" />
+    </SOURCES>
+  </library>
+</component>

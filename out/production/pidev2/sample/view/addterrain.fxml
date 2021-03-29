@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="778.0" style="-fx-background-color: #EDE4DC;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddTerrainController">
+    <children>
+        <JFXTextField fx:id="nom" focusColor="#bc0b9c" labelFloat="true" layoutX="104.0" layoutY="105.0" maxWidth="224.0" minWidth="224.0" prefHeight="32.0" prefWidth="352.0" promptText="Terrain Name" unFocusColor="#c91396" />
+        <JFXTextField fx:id="adresse" focusColor="#bc0b9c" labelFloat="true" layoutX="104.0" layoutY="166.0" maxWidth="224.0" minWidth="224.0" prefHeight="32.0" prefWidth="224.0" promptText="Adresse Terrain" unFocusColor="#c91396" />
+        <JFXTextField fx:id="price" focusColor="#bc0b9c" labelFloat="true" layoutX="104.0" layoutY="226.0" maxWidth="224.0" minWidth="224.0" prefHeight="32.0" prefWidth="224.0" promptText="Terrain Price" unFocusColor="#c91396" />
+        <JFXButton fx:id="add" buttonType="RAISED" layoutX="533.0" onAction="#AjouterTerrain" layoutY="276.0" prefHeight="41.0" prefWidth="208.0" style="-fx-background-color: #F6BDEA;" text="+ Add a new terrain" textFill="#a10174" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+            <cursor>
+                <Cursor fx:constant="MOVE" />
+            </cursor>
+        </JFXButton>
+        <JFXButton fx:id="view" buttonType="RAISED" layoutX="533.0" layoutY="331.0" onAction="#ViewStudent" prefHeight="41.0" prefWidth="208.0" style="-fx-background-color: #F6BDEA;" text="Views terrain" textFill="#a10174" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+            <cursor>
+                <Cursor fx:constant="MOVE" />
+            </cursor>
+        </JFXButton>
+        <Label layoutX="283.0" layoutY="32.0" text="Terrain Adjunction" textFill="#8d0468">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Line endX="100.0" layoutX="356.0" layoutY="61.0" opacity="0.49" startX="-100.0" stroke="#a10174" />
+        <Pane layoutX="548.0" layoutY="389.0" prefHeight="41.0" prefWidth="182.0" style="-fx-background-color: #EBE6E1;" />
+      <JFXTextField fx:id="type" focusColor="#bc0b9c" labelFloat="true" layoutX="104.0" layoutY="285.0" maxWidth="224.0" minWidth="224.0" prefHeight="32.0" prefWidth="224.0" promptText="Type terrain " unFocusColor="#c91396" />
+    </children>
+</AnchorPane>
